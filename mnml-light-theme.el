@@ -1,9 +1,14 @@
 (deftheme mnml-light)
 
+;; A theme that adds as little as possible to the stock emacs theme.
+;; Just enough to make it usable...
+
+
 (let ((background "#fafafa")
       (text "#111")
       (folded "#aaa")
-      (comment "#777")
+      (comment "#777777")
+      (doc "#6a6a6a")
       (region "#c6e6ff")
       (cursor "#B6D6FD")
       (cursortxt "#444")
@@ -24,6 +29,7 @@
    `(modeline-inactive ((t (:background ,modeline-inactive))))
 
    ;; Comments
+   `(font-lock-doc-face ((t (:foreground ,doc))))
    `(font-lock-comment-face ((t (:foreground ,comment :slant oblique))))
    `(font-lock-comment-delimeter-face ((t (:foreground ,comment :slant oblique))))
 
@@ -35,14 +41,11 @@
    `(avy-lead-face-0 ((t (:background "#3bafda" :foreground "white"))))
    `(avy-lead-face-1 ((t (:background "#3bafda" :foreground "white"))))
 
-   ;; powerline
+   ;; powerline/spaceline
    `(powerline-active1 ((t (:background ,powerline-active1 :foreground ,text))))
    `(powerline-active2 ((t (:background ,powerline-active2 :foreground ,text))))
    `(powerline-inactive1 ((t (:background ,powerline-inactive :foreground ,comment))))
    `(powerline-inactive2 ((t (:background ,powerline-inactive :foreground ,comment))))
-
-   ;; auto dim other buffers
-   `(auto-dim-other-buffers-face ((t (:foreground "#676869"))))
    ))
 
 (provide-theme 'mnml-light)
