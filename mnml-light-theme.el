@@ -33,8 +33,10 @@
    `(font-lock-comment-face ((t (:foreground ,comment :slant oblique))))
    `(font-lock-comment-delimeter-face ((t (:foreground ,comment :slant oblique))))
 
-   ;; hideshow-vis
-   `(hs-face ((t (:background ,background :foreground ,folded :slant oblique :box (:line-width 1 :color ,folded)))))
+   ;; hideshow
+   `(hs-face ((t (:background ,background :foreground ,folded :slant oblique))))
+   `(hs-fringe-face ((t (:foreground "#828282" :background "#e2e2e2" :box (:line-width 1 :color "#f00")))))
+   `(hideshowvis-hidable-face ((t (:foreground "#aeaeae" :box (:line-width 1 :color "#f00")))))
 
    ;; avy jump
    `(avy-lead-face ((t (:background "#3bafda" :foreground "white"))))
